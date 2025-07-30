@@ -1,0 +1,210 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #222;
+  position: relative;
+  min-height: 100vh;
+  z-index: 1;
+}
+.bg-gradient {
+  position: fixed;
+  left: 0; top: 0;
+  width: 100vw; height: 100vh;
+  z-index: -1;
+  background: linear-gradient(135deg, #0e76a8 0%, #3399ff 50%, #8fd3f4 100%);
+}
+header {
+  padding: 32px 16px 0 16px;
+  text-align: center;
+}
+.nav {
+  position: sticky;
+  top: 0;
+  background: rgba(14,118,168,0.97);
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+}
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background 0.18s;
+}
+.nav a:hover, .nav a:focus {
+  background: rgba(255,255,255,0.14);
+}
+.profile-card {
+  margin-top: 20px;
+  margin-bottom: 16px;
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 6px 30px rgba(14,118,168,0.08);
+  padding: 32px 24px;
+  display: inline-block;
+  border-radius: 24px;
+}
+.avatar img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #3399ff;
+  box-shadow: 0 0 0 8px #eaf6ff;
+  margin-bottom: 14px;
+  object-fit: cover;
+}
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #0e76a8, #3399ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+h2 {
+  font-size: 1.1rem;
+  color: #0e76a8;
+  margin-bottom: 1rem;
+}
+.intro {
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+}
+main {
+  max-width: 900px;
+  margin: 36px auto 0 auto;
+  padding: 0 16px;
+}
+.card {
+  background: rgba(255,255,255,0.97);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(14,118,168,0.08);
+  padding: 28px 24px;
+  margin-bottom: 32px;
+  transition: box-shadow 0.2s;
+  border-left: 7px solid #3399ff;
+}
+.card:hover {
+  box-shadow: 0 8px 40px rgba(14,118,168,0.15);
+}
+section h3 {
+  color: #0e76a8;
+  margin-top: 0;
+}
+.expertise-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 10px;
+}
+.expertise-item {
+  flex: 1 1 200px;
+  background: linear-gradient(90deg, #eaf6ff 0%, #f6fbff 100%);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(14,118,168,0.05);
+  padding: 16px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.07rem;
+  font-weight: 500;
+}
+.expertise-item span {
+  font-size: 1.5rem;
+}
+section ul {
+  list-style: disc inside;
+  margin: 8px 0 0 0;
+  padding: 0;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+}
+form input, form textarea {
+  padding: 10px;
+  border: 1px solid #dbeefe;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+form textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+form button {
+  align-self: flex-start;
+  padding: 10px 24px;
+  background: linear-gradient(90deg, #3399ff, #0e76a8);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(14,118,168,0.09);
+  transition: background 0.18s;
+}
+form button:hover {
+  background: linear-gradient(90deg, #0e76a8, #3399ff);
+}
+footer {
+  text-align: center;
+  padding: 32px 12px 20px 12px;
+  background: linear-gradient(90deg, #eaf6ff, #c7e1fa 85%);
+  margin-top: 32px;
+  border-top: 1px solid #b3dcf7;
+}
+.contact-info {
+  margin-bottom: 14px;
+  color: #0e76a8;
+  font-weight: 500;
+}
+.social-links {
+  margin-bottom: 8px;
+}
+.social-links a img {
+  width: 36px;
+  height: 36px;
+  margin: 0 10px;
+  vertical-align: middle;
+  transition: transform 0.2s;
+}
+.social-links a:hover img {
+  transform: scale(1.12) rotate(-4deg);
+}
+footer p {
+  color: #555;
+  font-size: 0.98rem;
+}
+@media (max-width: 700px) {
+  main {
+    padding: 0 3px;
+  }
+  .nav ul {
+    gap: 12px;
+    font-size: 0.98rem;
+  }
+  .expertise-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .profile-card {
+    padding: 24px 8px;
+  }
+  .card {
+    padding: 16px 8px;
+  }
+}
